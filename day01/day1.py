@@ -1,24 +1,24 @@
-# def p1(file):
-#     maxCal = 0
-#     try:
-#         fp = open(file)
-#         currMax = 0
-#         for line in fp:
-#             if "\n" in line:
-#                 line = line.strip()
-#                 if line == "":
-#                     maxCal = max(maxCal, currMax)
-#                     currMax = 0
-#                 else:
-#                     currMax += int(line)
-#             else:
-#                 maxCal = max(maxCal, currMax + int(line)) #last line
-#     finally:
-#         fp.close()
+def p1(file):
+    maxCal = 0
+    try:
+        fp = open(file)
+        currMax = 0
+        for line in fp:
+            if "\n" in line:
+                line = line.strip()
+                if line == "":
+                    maxCal = max(maxCal, currMax)
+                    currMax = 0
+                else:
+                    currMax += int(line)
+            else:
+                maxCal = max(maxCal, currMax + int(line)) #last line
+    finally:
+        fp.close()
 
-#     return maxCal
+    return maxCal
 
-# print(p1('day01/day1.txt'))
+print(p1('day01/day1.txt'))
 
 
 
